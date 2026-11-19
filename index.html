@@ -1,0 +1,79 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><title>솥고집 × 서울링크 · 캠페인 성과 보고</title><style>
+:root{color-scheme:light;--ink:#0b0f19;--sub:#5b6472;--mute:#8b93a1;--line:#e6e9ef;--accent:#3182F6;--ok:#12b886;--wait:#b45309}
+*{box-sizing:border-box;margin:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  color:var(--ink);background:#f2f4f7;line-height:1.62;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;font-size:14px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px 60px}
+.hd{background:#fff;border-radius:0 0 16px 16px;box-shadow:0 1px 16px rgba(0,0,0,.05);padding:30px 30px 22px;margin-bottom:16px}
+.eb{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+h1{font-size:24px;font-weight:900;letter-spacing:-.03em;margin:7px 0 3px;word-break:keep-all}
+.hd .date{color:var(--sub);font-size:13.5px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+@media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}.hd{padding:24px 18px 18px}.card{padding:20px 16px!important}}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:13px 10px;text-align:center;background:linear-gradient(#fff,#fcfdff)}
+.kpi b{display:block;font-size:22px;font-weight:900;letter-spacing:-.03em;color:var(--accent)}
+.kpi.g b{color:var(--ok)} .kpi small{font-size:12px;font-weight:700}
+.kpi span{font-size:11.5px;color:var(--sub);font-weight:700}
+.card{background:#fff;border-radius:14px;box-shadow:0 1px 14px rgba(0,0,0,.04);padding:24px 26px;margin-bottom:14px}
+.pane{display:block;scroll-margin-top:12px}
+.pane + .pane{border-top:1px solid var(--line);margin-top:26px;padding-top:22px}
+h2{font-size:17px;font-weight:900;margin:2px 0 12px;word-break:keep-all}
+h2 small{font-weight:600;color:var(--sub);font-size:14px}
+.summary{background:#eef4ff;border:1px solid #cfe0fb;border-left:4px solid var(--accent);border-radius:10px;
+  padding:15px 18px;font-size:15px;font-weight:600;line-height:1.6;margin:14px 0 4px}
+.summary ul{margin:0;padding-left:18px}.summary li{margin:3px 0;word-break:keep-all}.summary b{color:var(--accent)}
+.gnote{font-size:13px;color:var(--sub);text-align:center;margin-top:6px;word-break:keep-all}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:6px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:middle;white-space:nowrap}
+th{background:#f4f6f9;font-weight:800;font-size:12.5px;color:var(--sub)}
+tbody tr:hover td{background:#fafbfd}
+tfoot td{background:#f4f6f9;font-weight:900}
+.vw{font-weight:900;color:var(--accent)}
+a.rl{color:var(--accent);text-decoration:none;font-size:12.5px;font-weight:700}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.na{color:var(--mute);font-weight:600}
+.big{font-size:12px}
+.big th,.big td{padding:5px 7px}
+.big td:first-child,.big th:first-child{position:sticky;left:0;z-index:2;background:#fff}
+.big thead th:first-child{z-index:4;background:#f4f6f9}
+.big tbody tr:hover td:first-child{background:#fafbfd}
+.big tfoot td:first-child{background:#f4f6f9}
+.trial{font-size:11px;font-weight:800;padding:2px 8px;border-radius:20px;background:#e8f7f0;color:#1a8f6a;white-space:nowrap}
+.paid{font-size:11px;font-weight:800;padding:2px 8px;border-radius:20px;background:#eef4ff;color:var(--accent);white-space:nowrap}
+.wait{font-size:11px;font-weight:800;padding:1px 6px;border-radius:20px;background:#fff3e0;color:var(--wait)}
+.new{font-size:10px;font-weight:800;padding:1px 6px;border-radius:20px;background:#e8f7f0;color:#1a8f6a;margin-left:5px}
+.foot{text-align:center;color:var(--mute);font-size:12px;padding:8px 0 0;word-break:keep-all}
+.bigsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:10px 0 6px}
+.bigsum div{border:2px solid var(--accent);border-radius:14px;padding:16px 10px;text-align:center}
+.bigsum b{display:block;font-size:34px;font-weight:900;letter-spacing:-.03em;color:var(--accent);line-height:1.15}
+.bigsum small{font-size:15px}.bigsum span{font-size:13px;font-weight:800;color:var(--sub)}
+@media(max-width:640px){.bigsum b{font-size:26px}}
+tr.mrow{cursor:pointer}
+tr.mrow:hover td,tr.mrow[aria-expanded="true"] td{background:#eef4ff}
+tr.mrow:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.chev{display:inline-block;font-size:10px;color:var(--accent);margin-right:7px;transition:transform .15s}
+tr.mrow[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.more{font-size:12px;font-weight:800;color:var(--accent)}
+tr.mdet>td{background:#f8fafc;padding:10px;white-space:normal}
+tr.mdet .big{background:#fff}
+</style></head><body><div class="wrap">
+<div class="hd"><div class="eb">SEOUL LINK × SOTGOJIP · 캠페인 성과 보고</div>
+<h1>솥고집 인플루언서 캠페인 성과</h1>
+<div class="date">작성일 <b>2026-11-19 (Thu)</b> · 매주 월요일 갱신</div>
+<div class="kpis"><div class="kpi g"><b>0<small></small></b><span>프로젝트 전체 조회수</span></div><div class="kpi"><b>0<small></small></b><span>공유+저장</span></div><div class="kpi"><b>0<small>건</small></b><span>게시</span></div><div class="kpi"><b>14<small>명</small></b><span>진행 인원</span></div></div></div>
+<div class="card"><div class="pane" id="sum"><h2>요약</h2>
+<div class="bigsum"><div><b>14<small>명</small></b><span>진행 인원</span></div><div><b>0<small>건</small></b><span>게시</span></div>
+<div><b>14<small>명</small></b><span>업로드 전</span></div></div>
+<div class="summary"><ul><li>아직 업로드된 게시물이 없습니다. 업로드 전 인플루언서 <b>14명</b>의 방문 · 업로드 일정을 아래에 정리했습니다.</li></ul></div></div><div class="pane" id="wait"><h2>업로드 전 인플루언서 <small>· 14명</small></h2>
+<div class="scroll"><table class="big"><thead><tr><th>인플루언서</th><th>구분</th><th>국가</th><th>채널</th><th>진행 단계</th><th>방문일</th><th>업로드 예정일</th></tr></thead>
+<tbody><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://xhslink.cn/m/2nYZjqDaDSf" target="_blank" rel="noopener"><b>Gain需要吃什么</b></a></td><td><span class="paid">섭외</span></td><td>중국</td><td>샤오홍슈</td><td><span class="wait">방문 일정 조율 중</span></td><td>2026-12-03</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/hikari_kirakira22/" target="_blank" rel="noopener"><b>@hikari_kirakira22</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 일정 조율 중</span></td><td>미정</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.xiaohongshu.com/user/profile/5b6fe367e85cb900018e54d3" target="_blank" rel="noopener"><b>莲娜monica</b></a></td><td><span class="paid">섭외</span></td><td>중국</td><td>샤오홍슈</td><td><span class="wait">방문 일정 조율 중</span></td><td>미정</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/8mauam/" target="_blank" rel="noopener"><b>@8mauam</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-16</td><td><b>2026-12-05</b></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.xiaohongshu.com/user/profile/61b0397f000000001000fcd7" target="_blank" rel="noopener"><b>奶绒小熊🐻</b></a></td><td><span class="paid">섭외</span></td><td>중국</td><td>샤오홍슈</td><td><span class="wait">방문 예정</span></td><td>2026-11-19</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/play.travel_eat" target="_blank" rel="noopener"><b>@play.travel_eat</b></a></td><td><span class="paid">섭외</span></td><td>대만</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-21</td><td><b>2026-11-30</b></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/likelike.lifestyle/" target="_blank" rel="noopener"><b>@likelike.lifestyle</b></a></td><td><span class="paid">섭외</span></td><td>대만</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-21</td><td><b>2026-11-30</b></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/travelwithus_mgz/" target="_blank" rel="noopener"><b>@travelwithus_mgz</b></a></td><td><span class="paid">섭외</span></td><td>대만</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-21</td><td><b>2026-11-30</b></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/momoe_shizuoka/" target="_blank" rel="noopener"><b>@momoe_shizuoka</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-24</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/buzz_korea" target="_blank" rel="noopener"><b>@buzz_korea</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-11-25</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/deep_korea_00/" target="_blank" rel="noopener"><b>@deep_korea_00</b></a></td><td><span class="paid">섭외</span></td><td>기타</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-12-03</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/onikorea1/" target="_blank" rel="noopener"><b>@onikorea1</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-12-03</td><td><span class=na>미정</span></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/foodieyanyannn" target="_blank" rel="noopener"><b>@foodieyanyannn</b></a></td><td><span class="paid">섭외</span></td><td>홍콩</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-12-08</td><td><b>2026-12-15</b></td></tr><tr><td><a class="rl" style="font-size:12px;color:inherit" href="https://www.instagram.com/pe_co_gourmet/" target="_blank" rel="noopener"><b>@pe_co_gourmet</b></a></td><td><span class="paid">섭외</span></td><td>일본</td><td>인스타그램</td><td><span class="wait">방문 예정</span></td><td>2026-12-09</td><td><span class=na>미정</span></td></tr></tbody><tfoot><tr><td colspan="7">합계 · 14명</td></tr></tfoot></table></div></div></div>
+<div class="foot">서울링크 · 본 문서의 수치는 2026-11-19 (Thu) 기준입니다. 조회수 · 좋아요 · 댓글 · 공유 · 저장은 게시물 인사이트 값이며,
+샤오홍슈는 조회수가 공개되지 않아 좋아요 수로 추정한 조회수입니다. 「집계 중」= 업로드 7일 미만으로 수치가 아직 늘어나는 게시물.</div>
+</div><script>
+(function(){function t(r){var d=document.getElementById(r.getAttribute('aria-controls')),o=r.getAttribute('aria-expanded')==='true';
+r.setAttribute('aria-expanded',String(!o));d.hidden=o;r.querySelector('.more').textContent=o?'자세히 보기':'접기'}
+document.querySelectorAll('tr.mrow').forEach(function(r){r.addEventListener('click',function(ev){if(!ev.target.closest('a'))t(r)});
+r.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();t(r)}})})})();
+</script></body></html>
